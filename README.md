@@ -1,82 +1,29 @@
-**BMI Calculator**
-
-- **Description:** Lightweight command-line BMI (Body Mass Index) calculator written in Python. The program prompts for weight (kg) and height (m), computes BMI rounded to two decimals, and shows the standard BMI category.
-
-**Features**
-
-- **Simple CLI:** Run directly with Python — no GUI required.
-- **Clear validation:** Rejects non-positive values for weight/height.
-- **Categorization:** Uses standard BMI ranges (Underweight, Normal Weight, Overweight, Obese).
-
-**Requirements**
-
-- **Python:** 3.8 or newer (3.x series). No external packages required.
-
-**Quick Start**
-
-- Clone or download this repository and open a terminal in the project folder.
-
-**Run (PowerShell)**
-
-```powershell
-python .\bmi.py
-```
-
-**Example session**
-
-- Program prints: `--- Welcome to the BMI Calculator ---`
-- Input prompts:
-  - `Enter weight (kg): 70`
-  - `Enter height (meters): 1.75`
-- Output (example):
-
-```
-------------------------------
-📊 Your BMI is: 22.86
-🩺 Category: Normal Weight
-------------------------------
-```
-
-**What the code contains**
-
-- **`bmi.py`**: single-file CLI program with:
-  - `BMICalculator` class — `calculate_bmi(weight_kg, height_m)` and `get_category(bmi_value)`.
-  - `get_valid_number(prompt)` — helper that loops until the user enters a valid numeric value.
-  - `main()` — interactive loop that gathers input, shows results, and optionally repeats.
-
-**Design notes & edge cases**
-
-- The calculator expects **weight in kilograms** and **height in meters**.
-- The program raises an error for zero or negative height/weight and prompts again.
-- BMI is rounded to two decimal places. Category boundaries are inclusive (e.g., 18.5 → Normal Weight).
-
-**Contributing**
-
-- Feel free to open issues or pull requests to add features (tests, CLI args, GUI, persistence).
-
-**License**
-
-- This repository does not include a license file.
+🏥 BMI Tracker Ultimate
 
 A modern, desktop-based Body Mass Index (BMI) calculator and health tracker built with Python.
 
+This application allows users to calculate their BMI, categorize it (Underweight, Normal, Overweight, Obese), save their history to a local database, and visualize their health trends over time.
+
 ✨ Features
 
-Advanced GUI: Built with CustomTkinter for a sleek, dark-mode interface.
+Advanced GUI: Built with CustomTkinter for a professional, dark-mode interface.
 
-Data Persistence: Uses SQLite to save user history locally.
+Data Persistence: Uses SQLite to automatically save user history.
 
-Smart Visualizations: Interactive Matplotlib graphs with color-coded health zones (Underweight, Normal, Obese).
+Smart Visualizations: Interactive Matplotlib graphs with color-coded health zones.
 
 Statistical Analysis: Automatically calculates Average, Max, and Min BMI.
 
 Multi-User Support: Track history for different users independently.
 
+Input Validation: robust error handling prevents crashes on invalid inputs.
+
 🚀 Installation
 
 Clone the repository
 
-git clone [https://github.com/YOUR_USERNAME/BMI-Tracker.git](https://github.com/YOUR_USERNAME/BMI-Tracker.git)
+git clone https://github.com/Manas050606/OIBSIP-BMI-Calculator.git
+
 cd BMI-Tracker
 
 Install dependencies
@@ -91,8 +38,20 @@ python bmi.py
 
 Python 3.10+
 
-CustomTkinter (UI Framework)
+CustomTkinter (Modern UI Framework)
 
-Matplotlib (Data Visualization)
+Matplotlib (Data Visualization & Graphing)
 
-SQLite3 (Database)
+SQLite3 (Built-in Database)
+
+📸 How to Use
+
+            ![Screenshot](image.png)
+
+Enter Data: Type a unique User Name, Weight (kg), and Height (m).
+
+Calculate: Click Calculate & Save. The app will display your BMI and category immediately.
+
+View Trends: Click Stats & Trends to see a graph of your progress over time, including your average and highest/lowest records.
+
+Reset: Use the Reset History button to clear data for a specific user.
